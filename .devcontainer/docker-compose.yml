@@ -14,8 +14,7 @@ services:
       - POSTGRES_DB=n8n
       - POSTGRES_USER=n8n
       - POSTGRES_PASSWORD=password
-    networks:
-      - mynetwork
+      
   n8n:
     image: n8nio/n8n
     restart: unless-stopped
@@ -34,8 +33,7 @@ services:
       - N8N_ENCRYPTION_KEY=your_super_secret_key
     volumes:
       - n8n-data:/home/node/.n8n
-    networks:
-      - mynetwork
+   
 
   networks:
     mynetwork:
