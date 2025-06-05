@@ -37,3 +37,6 @@ services:
     volumes:
       - n8n-data:/home/node/.n8n
    
+networks:
+  default:
+    driver: bridge
